@@ -4,7 +4,11 @@
 *todo: update with alternative syuntax to display required result
 *todo: let da moose get loose 
 *todo: help moose speak
-todo:"n help mose question existence
+*todo: help moose question existence
+*todo: phase 5
+*todo: phase 6
+*todo: phase 7
+*todo: phase 8
 */
 
 
@@ -48,7 +52,7 @@ void MooseSays(string message)
     ");
 }
 
-MooseSays("I\'m just stoked to be here!");
+
 
 // &Phase 5 below
 
@@ -73,9 +77,9 @@ bool MooseAsks(string question)
     }
 }
 
-Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-Console.WriteLine("--------------------------------------------");
-Console.WriteLine();
+// Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+// Console.WriteLine("--------------------------------------------");
+// Console.WriteLine();
 
 // bool isTrue = MooseAsks("Is... anything real?");
 // // &phase 6 additions
@@ -142,8 +146,26 @@ void SecretQuestion()
     }
 }
 
-// Ask some questions
-CanadaQuestion();
-EnthusiasticQuestion();
-LoveCSharpQuestion();
-SecretQuestion();
+// // Ask some questions
+// CanadaQuestion();
+// EnthusiasticQuestion();
+// LoveCSharpQuestion();
+// SecretQuestion();
+
+
+// &phase8
+Main();
+
+void Main()
+{
+    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    Console.WriteLine("--------------------------------------------");
+    Console.WriteLine();
+
+    MooseSays("Howdy, gang. Nice to meet y'all! I\'m just stoked to be here!");
+
+    CanadaQuestion();
+    EnthusiasticQuestion();
+    LoveCSharpQuestion();
+    SecretQuestion();
+}
