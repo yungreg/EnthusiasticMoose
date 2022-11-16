@@ -14,12 +14,6 @@
 
 using System;
 
-// &old phase code:
-// Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-// Console.WriteLine("--------------------------------------------");
-// Console.WriteLine();
-
-
 void MooseSays(string message)
 {
     Console.WriteLine($@"
@@ -54,7 +48,7 @@ void MooseSays(string message)
 
 
 
-// &Phase 5 below
+//^ Phase 5 below
 
 bool MooseAsks(string question)
 {
@@ -77,23 +71,7 @@ bool MooseAsks(string question)
     }
 }
 
-// Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-// Console.WriteLine("--------------------------------------------");
-// Console.WriteLine();
-
-// bool isTrue = MooseAsks("Is... anything real?");
-// // &phase 6 additions
-
-// if (isTrue)
-// {
-//     MooseSays("");
-// }
-// else
-// {
-//     MooseSays("I  K N E W  I T !!! *puts on tinfoil hat*");
-// }
-
-// & part 7 below 
+//^ part 7 below 
 void CanadaQuestion()
 {
     bool isTrue = MooseAsks("Is... anything real?");
@@ -146,21 +124,12 @@ void SecretQuestion()
     }
 }
 
-// // Ask some questions
-// CanadaQuestion();
-// EnthusiasticQuestion();
-// LoveCSharpQuestion();
-// SecretQuestion();
-
-
-// &phase8
+//^ phase8 & phase 9 accidentally
 Main();
 
 void Main()
 {
     Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
-    Console.WriteLine("--------------------------------------------");
-    Console.WriteLine();
 
     MooseSays("Howdy, gang. Nice to meet y'all! I\'m just stoked to be here!");
 
