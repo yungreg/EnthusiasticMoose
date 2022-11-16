@@ -78,4 +78,13 @@ Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
 
 bool isTrue = MooseAsks("Is... anything real?");
-Console.WriteLine(isTrue);
+// &phase 6 additions
+
+if (isTrue)
+{
+    MooseSays("Really? That seems...unlikely. Where's the proof that we arent just projections of energy long past, like the way we see the light from the stars? where is the proof that time is even linear? YOU DON'T HAVE THESE ANSWERS, SWAY");
+}
+else
+{
+    MooseSays("I  K N E W  I T !!! *puts on tinfoil hat*");
+}
