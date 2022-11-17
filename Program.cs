@@ -9,6 +9,9 @@
 *todo: phase 6
 *todo: phase 7
 *todo: phase 8
+*todo: phase 9
+todo: make moose MAGICAL
+todo: make array of objects for the iundex position selection 
 */
 
 
@@ -50,91 +53,95 @@ void MooseSays(string message)
 
 //^ Phase 5 below
 
-bool MooseAsks(string question)
-{
-    Console.Write($"{question} (Y/N): ");
-    string answer = Console.ReadLine().ToLower();
+// bool MooseAsks(string question)
+// {
+//     Console.Write($"{question} (Y/N): ");
+//     string answer = Console.ReadLine().ToLower();
 
-    while (answer != "y" && answer != "n")
-    {
-        Console.Write($"{question} (Y/N): ");
-        answer = Console.ReadLine().ToLower();
-    }
-
-    if (answer == "y")
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
+//     while (answer != "y" && answer != "n")
+//     {
+//         Console.Write($"{question} (Y/N): ");
+//         answer = Console.ReadLine().ToLower();
+//     }
+//     //? can you make the answer equal a data type?
+//     if (answer == "any wis")
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
 
 //^ part 7 below 
-void CanadaQuestion()
-{
-    bool isTrue = MooseAsks("Is... anything real?");
-    if (isTrue)
-    {
-        MooseSays("Really? That seems...unlikely. Where's the proof that we arent just projections of energy long past, like the way we see the light from the stars? where is the proof that time is even linear? YOU DON'T HAVE THESE ANSWERS, SWAY");
-    }
-    else
-    {
-        MooseSays("I  K N E W  I T !!! *puts on tinfoil hat*");
-    }
-}
 
-void EnthusiasticQuestion()
-{
-    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
-    if (isEnthusiastic)
-    {
-        MooseSays("Yay!");
-    }
-    else
-    {
-        MooseSays("You should try it!");
-    }
-}
-
-void LoveCSharpQuestion()
-{
-    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
-    if (doesLoveCSharp)
-    {
-        MooseSays("I mean... it seems fine!");
-    }
-    else
-    {
-        MooseSays("You will...oh, yes, you will...");
-    }
-}
-
-void SecretQuestion()
-{
-    bool wantsSecret = MooseAsks("Do you want to know a secret?");
-    if (wantsSecret)
-    {
-        MooseSays("I'm flattered that you think I'll keep it!");
-    }
-    else
-    {
-        MooseSays("That's probabaly not my business, is it?");
-    }
-}
 
 //^ phase8 & phase 9 accidentally
 Main();
 
 void Main()
 {
-    Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    // Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+    MooseSays("Howdy! I am the GREAT MAGIC MOOSE!");
+    bool isActive = true;
+    while (isActive)
+    {
+        MooseSays("What wish can I grant?");
+        Console.Write("Input your wish here:");
+        string UserAnswer = Console.ReadLine();
+        if (UserAnswer == "")
+        {
+            isActive = false;
+            return; //^this should end the program on blank entry
+        }
+        else
+        {
+            QuestionResponse(UserAnswer);
+        }
+    }
 
-    MooseSays("Howdy, gang. Nice to meet y'all! I\'m just stoked to be here!");
-
-    CanadaQuestion();
-    EnthusiasticQuestion();
-    LoveCSharpQuestion();
-    SecretQuestion();
+    // CanadaAnswer();
 }
+
+void QuestionResponse(string question)
+{
+    string[] answers = { "As I see it, yes", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "It is certain", "It is decidedly so" };
+    Random r = new Random();
+    int selectNum = r.Next(0, answers.Length);
+    string answer = answers[selectNum];
+    MooseSays(answer);
+}
+
+
+//^ seasborns answer: 
+// void Main()
+// {
+
+//     Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
+//     Console.WriteLine("--------------------------------------------");
+//     Console.WriteLine();
+//     bool isActive = true;
+//     while(isActive) {
+//     // Let the moose speak!
+//         MooseSays("Please ask a question: ");
+//         string userQuestion = Console.ReadLine();
+//         if(userQuestion == "") {
+//             isActive = false;
+//             return;
+//         }
+//         questionResponse(userQuestion);
+
+
+
+//     }
+
+// }
+
+// void questionResponse(string question) {
+//     string[] answers = {"As I see it, yes", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again", "Don't count on it", "It is certain", "It is decidedly so"};
+//     Random r = new Random();
+//     int selectNum = r.Next(0, answers.Length);
+//     string answer = answers[selectNum];
+//     MooseSays(answer);
+// }
